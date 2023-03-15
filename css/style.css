@@ -14,3 +14,39 @@
 .box {
     background-color: rgb(174, 211, 200);
 }
+
+.child {
+    width: 45%;
+}
+
+.tip_child {
+    padding: 2rem;
+    height: 40%;
+    width: 30%;
+    background-color: rgb(28, 75, 67);
+    cursor: pointer;
+}
+
+.tip_child.active {
+    background-color: aqua;
+}
+
+.custom {
+    background-color: rgb(191, 201, 201);
+}
+
+
+
+
+.green-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.green-button.active {
+    background-color: red;
+}
