@@ -28,35 +28,37 @@ let total = document.getElementById("total");
 let people = document.getElementById("people");
 
 
+
 five.addEventListener("click", () => {
     let number = parseFloat(input.value);
-    let five = (5 / 100) * number;
-    tip.innerText = `$ ${five}`;
+    let five = Math.round((5 / 100) * number);
+    console.log(ten);
+    tip.innerText = `$ ${five.toFixed(0)}`;
     total.innerHTML = `$ ${five + number}`;
-
 });
 ten.addEventListener("click", () => {
     let number = parseFloat(input.value);
-    let ten = (10 / 100) * number;
-    tip.innerText = `$ ${ten}`;
+    let ten = Math.round((10 / 100) * number);
+    console.log(ten);
+    tip.innerText = `$ ${ten.toFixed(0)}`;
     total.innerHTML = `$ ${ten + number}`;
 });
 fifteen.addEventListener("click", () => {
     let number = parseFloat(input.value);
     let fifteen = (15 / 100) * number;
-    tip.innerText = `$ ${fifteen}`;
+    tip.innerText = `$ ${fifteen.toFixed(0)}`;
     total.innerHTML = `$ ${fifteen + number}`;
 });
 twentyfive.addEventListener("click", () => {
     let number = parseFloat(input.value);
     let twentyfive = (25 / 100) * number;
-    tip.innerText = `$ ${twentyfive}`;
+    tip.innerText = `$ ${twentyfive.toFixed(0)}`;
     total.innerHTML = `$ ${twentyfive + number}`;
 });
 fifty.addEventListener("click", () => {
     let number = parseFloat(input.value);
     let fifty = (50 / 100) * number;
-    tip.innerText = `$ ${fifty}`;
+    tip.innerText = `$ ${fifty.toFixed(0)}`;
     total.innerHTML = `$ ${fifty + number}`;
 });
 
