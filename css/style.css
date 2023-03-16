@@ -17,23 +17,50 @@
 
 .child {
     width: 45%;
+    height: 90%;
+
 }
 
-.tip_child {
-    padding: 2rem;
-    height: 40%;
+.second {
+    background-color: rgb(15, 99, 64);
+}
+
+
+
+
+.tip_button {
+    background-color: rgb(15, 99, 64);
     width: 30%;
-    background-color: rgb(28, 75, 67);
-    cursor: pointer;
 }
 
-.tip_child.active {
-    background-color: aqua;
+.tip_button_custom {
+    background-color: rgb(15, 99, 64);
+    width: 30%;
 }
+
+
 
 .custom {
     background-color: rgb(191, 201, 201);
 }
+
+.text {
+    font-size: 1.1rem;
+}
+
+.money_text {
+    color: rgb(16, 187, 150);
+    font-size: 2rem;
+}
+
+.btn-primary {
+    background-color: rgb(16, 187, 150);
+}
+
+
+
+
+
 
 
 

@@ -19,9 +19,9 @@
 
 
 
-    <div class="mb-2" style="position: relative; top: 12%; letter-spacing: 0.35rem;">
-      <div class="child text-center ">SPLIT</div>
-      <div class="child text-center">TTER</div>
+    <div class="mb-3" style="position: relative; top: 12%; letter-spacing: 0.35rem;">
+      <div class=" text-center ">SPLI</div>
+      <div class=" text-center">TTER</div>
     </div>
 
     <div class=" child-container rounded bg-light  my-auto mx-auto d-flex align-items-center justify-content-around"
@@ -32,41 +32,65 @@
         <div class="form  h-100 ">
           <div class="mb-1 mt-4">
             <label for="bill" class="form-label">Bill:</label>
-            <input type="text" class="form-control text-left" id="bill">
+            <input type="text" id="bill" class="form-control text-left" id="bill">
           </div>
 
           <div class="mb-1  " style="height: 34%;">
             <label class="form-label">Select Tip %</label>
 
             <div class="tip  h-75 d-flex flex-wrap w-100 justify-content-around">
-              <div class="tip_child  py-1 bg-info rounded text-light  text-center">5%</div>
-              <div class="tip_child  py-1 bg-info rounded text-light  text-center ">10%</div>
-              <div class="tip_child  py-1 bg-info rounded text-light  text-center ">15%</div>
-              <div class="tip_child  py-1 bg-info rounded text-light  text-center ">25%</div>
-              <div class="tip_child  py-1 bg-info rounded text-light text-center ">50%</div>
-              <div class="tip_child  py-1  rounded custom text-center px-3 ">custom</div>
 
-
-
-              <!-- <div class="tip_child w-25 h-50 py-1 bg-info rounded text-light text-center mx-1 ">5%</div>
-              <div class="tip_child w-25 h-50 py-1 bg-info rounded text-light text-center mx-1 ">5%</div>
-              <div class="tip_child w-25 h-50 py-1 bg-info rounded text-light text-center mx-1 ">5%</div> -->
-
+              <button id="five" class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">5%</button>
+              <button id="ten" class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">10%</button>
+              <button id="fifteen"
+                class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">15%</button>
+              <button id="twentyfive"
+                class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">25%</button>
+              <button id="fifty" class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">50%</button>
+              <button class="tip_button_custom text-center  rounded px-0 py-0 border-0  text-light my-1 custom"><span
+                  class="text text-center text-dark">Custom</span>
+              </button>
 
             </div>
 
           </div>
-          <div class="mb-1">
+          <!-- <div class="mb-1 mt-3">
             <label for="people" class="form-label">Number of People</label>
             <input type="text" class="form-control text-left" id="people">
-          </div>
+          </div> -->
         </div>
 
 
       </div>
-      <div class="child bg-info rounded  h-75 my-2">
+      <div class="child second  rounded  my-2 p-3 ">
+        <div class="tip_amount d-flex align-items-center justify-content-between h-25 mt-1">
+          <div class="d-flex m-0 flex-column h-100 mx-2 text-light">
+            <p class="m-0 ">Tip Amount</p>
+            <span class="m-0 text-sm" style="font-size: 0.8rem;">/person</span>
+          </div>
+          <p id="tip" class="fw-bold text-right my-0 mx-2 h-100 money_text"></p>
+        </div>
+
+        <div class="tip_amount d-flex align-items-center justify-content-between h-25 mt-2">
+          <div class="d-flex m-0 flex-column h-100 mx-2 text-light">
+            <p class="m-0 ">Total</p>
+            <span class="m-0 text-sm" style="font-size: 0.8rem;">/person</span>
+          </div>
+          <p id="total" class="fw-bold text-right my-0 mx-2 h-100 money_text"></p>
+        </div>
+        <div class="">
+          <button class="btn btn-primary border-0 w-100 mt-5">RESET</button>
+        </div>
 
 
+
+
+
+
+
+        <div class="total">
+
+        </div>
 
 
 
@@ -77,13 +101,8 @@
   </div>
 
 
-  <!-- Your HTML code for the buttons -->
-  <button class="green-button">Button 1</button>
-  <button class="green-button">Button 2</button>
-  <button class="green-button">Button 3</button>
-  <button class="green-button">Button 4</button>
-  <button class="green-button">Button 5</button>
-  <button class="green-button">Button 6</button>
+
+
 
 
 
