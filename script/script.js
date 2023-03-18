@@ -29,7 +29,6 @@ let people = document.getElementById("people");
 let reset = document.getElementById("reset");
 
 
-
 var lastTipValue = 0;
 var lastTotalValue = 0;
 
@@ -39,40 +38,32 @@ tip.innerHTML = "$ 0";
 total.innerHTML = "$ 0";
 
 
-
-// five.addEventListener("click", () => {
-//     let number = parseFloat(input.value);
-//     let five = Math.round((5 / 100) * number);
-//     console.log(ten);
-//     tip.innerText = `$ ${five.toFixed(0)}`;
-//     total.innerHTML = `$ ${five + number}`;
-// });
-
-
 five.addEventListener("click", () => {
-    let number = Math.round(input.value);
-    console.log(typeof (number));
-    let five = Math.round((5 / 100) * number);
-
-    tip.innerText = `$ ${five}`;
-    total.innerHTML = `$ ${five + number}`;
+    let amount = Math.round(input.value);
+    lastTipValue = (5 / 100) * amount;
+    lastTotalValue = lastTipValue + parseFloat(input.value);
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+    activeBtn = 0.05;
 });
-
 
 ten.addEventListener("click", () => {
-    let number = parseFloat(input.value);
-    let ten = Math.round((10 / 100) * number);
-    console.log(ten);
-    tip.innerText = `$ ${ten.toFixed(0)}`;
-    total.innerHTML = `$ ${ten + number}`;
-});
-fifteen.addEventListener("click", () => {
-    let number = parseFloat(input.value);
-    let fifteen = (15 / 100) * number;
-    tip.innerText = `$ ${fifteen.toFixed(0)}`;
-    total.innerHTML = `$ ${fifteen + number}`;
+    let amount = Math.round(input.value);
+    lastTipValue = (10 / 100) * amount;
+    lastTotalValue = lastTipValue + parseFloat(input.value);
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+    activeBtn = 0.1;
 });
 
+fifteen.addEventListener("click", () => {
+    let amount = Math.round(input.value);
+    lastTipValue = (15 / 100) * amount;
+    lastTotalValue = lastTipValue + parseFloat(input.value);
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+    activeBtn = 0.15;
+});
 
 twentyfive.addEventListener("click", () => {
     let amount = Math.round(input.value);
@@ -82,8 +73,6 @@ twentyfive.addEventListener("click", () => {
     total.innerHTML = `$ ${lastTotalValue / people.value}`;
     activeBtn = 0.25;
 });
-
-
 
 fifty.addEventListener("click", () => {
     let amount = Math.round(input.value);
@@ -105,7 +94,6 @@ people.addEventListener("input", () => {
 })
 
 input.addEventListener("input", () => {
-
 
     let amount = input.value;
     lastTipValue = activeBtn * amount;
