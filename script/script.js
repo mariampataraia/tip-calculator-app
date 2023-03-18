@@ -72,75 +72,46 @@ fifteen.addEventListener("click", () => {
     tip.innerText = `$ ${fifteen.toFixed(0)}`;
     total.innerHTML = `$ ${fifteen + number}`;
 });
-// twentyfive.addEventListener("click", () => {
-//     let number = parseFloat(input.value);
-//     let twentyfive = (25 / 100) * number;
-//     tip.innerText = `$ ${twentyfive.toFixed(0) / people.value}`;
-//     total.innerHTML = `$ ${(twentyfive + number) / people.value}`;
-//     lastTipValue = twentyfive;
-//     lastTotalValue = twentyfive + number;
-
-// });
-
-
-
-bill.addEventListener("input", () => {
-    tip.innerText = `$ ${lastTipValue / people.value}`;
-    total.innerHTML = `$ ${lastTotalValue / people.value}`;
-})
-
 
 
 twentyfive.addEventListener("click", () => {
     let amount = Math.round(input.value);
-
     lastTipValue = (25 / 100) * amount;
     lastTotalValue = lastTipValue + parseFloat(input.value);
-
     tip.innerText = `$ ${lastTipValue / people.value}`;
     total.innerHTML = `$ ${lastTotalValue / people.value}`;
-
     activeBtn = 0.25;
 });
 
+
+
 fifty.addEventListener("click", () => {
     let amount = Math.round(input.value);
-
     lastTipValue = (50 / 100) * amount;
     lastTotalValue = lastTipValue + parseFloat(input.value);
-
     tip.innerText = `$ ${lastTipValue / people.value}`;
     total.innerHTML = `$ ${lastTotalValue / people.value}`;
-
     activeBtn = 0.5;
 });
 
-
-
 people.addEventListener("input", () => {
-    tip.innerText = `$ ${lastTipValue / people.value}`;
-    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+    if (people.value == 0 || input.value == "") {
+        tip.innerText = `$ ${(lastTipValue).toFixed(1)}`;
+        total.innerHTML = `$ ${(lastTotalValue).toFixed(1)}`;
+    } else {
+        tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
+        total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
+    }
 })
-
-
 
 input.addEventListener("input", () => {
 
 
-    let amount = Math.round(input.value);
-
+    let amount = input.value;
     lastTipValue = activeBtn * amount;
     lastTotalValue = lastTipValue + parseFloat(input.value);
-
     tip.innerText = `$ ${lastTipValue / people.value}`;
     total.innerHTML = `$ ${lastTotalValue / people.value}`;
-
-
-    // tip.innerText = `$ dvsdvbd`;
-    // // tip.innerText = `$ ${lastTipValue / people.value}`;
-    // total.innerHTML = `$ ${lastTotalValue / people.value}`;
-
-
 })
 
 
