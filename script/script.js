@@ -26,16 +26,39 @@ let fifty = document.getElementById("fifty");
 let tip = document.getElementById("tip");
 let total = document.getElementById("total");
 let people = document.getElementById("people");
+let reset = document.getElementById("reset");
 
+
+
+var lastTipValue = 0;
+var lastTotalValue = 0;
+
+var activeBtn = null;
+
+tip.innerHTML = "$ 0";
+total.innerHTML = "$ 0";
+
+
+
+// five.addEventListener("click", () => {
+//     let number = parseFloat(input.value);
+//     let five = Math.round((5 / 100) * number);
+//     console.log(ten);
+//     tip.innerText = `$ ${five.toFixed(0)}`;
+//     total.innerHTML = `$ ${five + number}`;
+// });
 
 
 five.addEventListener("click", () => {
-    let number = parseFloat(input.value);
+    let number = Math.round(input.value);
+    console.log(typeof (number));
     let five = Math.round((5 / 100) * number);
-    console.log(ten);
-    tip.innerText = `$ ${five.toFixed(0)}`;
+
+    tip.innerText = `$ ${five}`;
     total.innerHTML = `$ ${five + number}`;
 });
+
+
 ten.addEventListener("click", () => {
     let number = parseFloat(input.value);
     let ten = Math.round((10 / 100) * number);
@@ -49,18 +72,105 @@ fifteen.addEventListener("click", () => {
     tip.innerText = `$ ${fifteen.toFixed(0)}`;
     total.innerHTML = `$ ${fifteen + number}`;
 });
+// twentyfive.addEventListener("click", () => {
+//     let number = parseFloat(input.value);
+//     let twentyfive = (25 / 100) * number;
+//     tip.innerText = `$ ${twentyfive.toFixed(0) / people.value}`;
+//     total.innerHTML = `$ ${(twentyfive + number) / people.value}`;
+//     lastTipValue = twentyfive;
+//     lastTotalValue = twentyfive + number;
+
+// });
+
+
+
+bill.addEventListener("input", () => {
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+})
+
+
+
 twentyfive.addEventListener("click", () => {
-    let number = parseFloat(input.value);
-    let twentyfive = (25 / 100) * number;
-    tip.innerText = `$ ${twentyfive.toFixed(0)}`;
-    total.innerHTML = `$ ${twentyfive + number}`;
+    let amount = Math.round(input.value);
+
+    lastTipValue = (25 / 100) * amount;
+    lastTotalValue = lastTipValue + parseFloat(input.value);
+
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+
+    activeBtn = 0.25;
 });
+
 fifty.addEventListener("click", () => {
-    let number = parseFloat(input.value);
-    let fifty = (50 / 100) * number;
-    tip.innerText = `$ ${fifty.toFixed(0)}`;
-    total.innerHTML = `$ ${fifty + number}`;
+    let amount = Math.round(input.value);
+
+    lastTipValue = (50 / 100) * amount;
+    lastTotalValue = lastTipValue + parseFloat(input.value);
+
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+
+    activeBtn = 0.5;
 });
 
 
 
+people.addEventListener("input", () => {
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+})
+
+
+
+input.addEventListener("input", () => {
+
+
+    let amount = Math.round(input.value);
+
+    lastTipValue = activeBtn * amount;
+    lastTotalValue = lastTipValue + parseFloat(input.value);
+
+    tip.innerText = `$ ${lastTipValue / people.value}`;
+    total.innerHTML = `$ ${lastTotalValue / people.value}`;
+
+
+    // tip.innerText = `$ dvsdvbd`;
+    // // tip.innerText = `$ ${lastTipValue / people.value}`;
+    // total.innerHTML = `$ ${lastTotalValue / people.value}`;
+
+
+})
+
+
+reset.addEventListener("click", () => {
+    bill.value = "";
+    tip.innerHTML = "$ 0";
+    total.innerHTML = "$ 0";
+    people.value = 1;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fifty.addEventListener("click", () => {
+//     let number = Math.round(input.value);
+//     let fifty = (50 / 100) * number;
+//     tip.innerText = `$ ${fifty / people.value}`;
+//     total.innerHTML = `$ ${(fifty + number) / people.value}`;
+//     lastTipValue = fifty;
+//     lastTotalValue = fifty + number;
+//     actoveBtn = fifty;
+// });
