@@ -133,3 +133,5 @@ reset.addEventListener("click", () => {
 //     lastTotalValue = fifty + number;
 //     actoveBtn = fifty;
 // });
+
+
