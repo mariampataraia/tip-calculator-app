@@ -12,7 +12,7 @@
 }
 
 .box {
-    background-color: rgb(174, 211, 200);
+    background-color: #c5e4e7;
 }
 
 .child {
@@ -22,14 +22,14 @@
 }
 
 .second {
-    background-color: rgb(15, 99, 64);
+    background-color: #00474b;
 }
 
 
 
 
 .tip_button {
-    background-color: rgb(15, 99, 64);
+    background-color: #00474b;
     width: 30%;
 }
 
@@ -41,7 +41,7 @@
 
 
 .custom {
-    background-color: rgb(191, 201, 201);
+    background-color: #f4f8fb;
 }
 
 .text {
@@ -49,16 +49,16 @@
 }
 
 .money_text {
-    color: rgb(16, 187, 150);
+    color: #31c3b1;
     font-size: 1.5rem;
 }
 
 .text-info {
-    color: rgb(16, 187, 150) !important;
+    color: #547477 !important;
 }
 
 .btn-primary {
-    background-color: rgb(16, 187, 150);
+    background-color: #26c2ad;
 }
 
 
@@ -114,9 +114,9 @@
     text-align: right;
     border: none;
     outline: none;
-    background-color: azure;
+    background-color: #f3f8fb;
 }
 
 .input-container {
-    background-color: azure;
+    background-color: #f3f8fb;
 }

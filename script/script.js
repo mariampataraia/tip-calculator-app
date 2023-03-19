@@ -4,12 +4,12 @@ const buttons = document.querySelectorAll('.tip_button');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         // Set the background color of the clicked button to red
-        button.style.backgroundColor = 'rgb(16, 187, 150)';
+        button.style.backgroundColor = '#26c2ad';
 
         // Set the background color of all the other buttons back to green
         buttons.forEach(otherButton => {
             if (otherButton !== button) {
-                otherButton.style.backgroundColor = 'green';
+                otherButton.style.backgroundColor = '#00474b';
             }
         });
     });
