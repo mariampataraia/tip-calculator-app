@@ -30,6 +30,8 @@ let reset = document.getElementById("reset");
 
 let border = document.getElementById("inputBorder");
 
+
+
 var lastTipValue = 0;
 var lastTotalValue = 0;
 
@@ -84,6 +86,7 @@ fifty.addEventListener("click", () => {
     activeBtn = 0.5;
 });
 
+
 people.addEventListener("input", () => {
     if (people.value == 0 || input.value == "") {
         tip.innerText = `$ ${(lastTipValue).toFixed(1)}`;
@@ -114,8 +117,40 @@ reset.addEventListener("click", () => {
 })
 
 
+custom.addEventListener("click", () => {
+
+})
 
 
+
+let button = document.getElementById('custom');
+
+button.addEventListener('click', () => {
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.style.width = '5.88vw';
+    input.setAttribute('id', 'customInput');
+    input.classList.add('input');
+    input.classList.add('inputtt');
+    input.addEventListener('blur', () => {
+        button.innerText = input.value;
+
+    });
+    button.replaceWith(input);
+    input.focus();
+
+});
+
+
+// button.addEventListener("click", () => {
+//     let amount = Math.round(input.value);
+//     let value=button.value
+//     lastTipValue = (50 / 100) * amount;
+//     lastTotalValue = lastTipValue + parseFloat(input.value);
+//     tip.innerText = `$ ${lastTipValue / people.value}`;
+//     total.innerHTML = `$ ${lastTotalValue / people.value}`;
+//     activeBtn = 0.5;
+// });
 
 
 
@@ -132,5 +167,4 @@ reset.addEventListener("click", () => {
 //     lastTotalValue = fifty + number;
 //     actoveBtn = fifty;
 // });
-
 
