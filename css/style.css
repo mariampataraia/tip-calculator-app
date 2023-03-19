@@ -6,13 +6,14 @@
 
 
 .background {
-    background-color: rgb(233, 238, 236);
+    background-color: #f0f0f0;
     width: 100vw;
     height: 100vh;
 }
 
 .box {
     background-color: #c5e4e7;
+    box-shadow: 0px 30px 40px #4d5b5c21;
 }
 
 .child {
@@ -119,4 +120,6 @@
 
 .input-container {
     background-color: #f3f8fb;
+
+
 }

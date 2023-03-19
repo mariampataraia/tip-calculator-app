@@ -28,6 +28,7 @@ let total = document.getElementById("total");
 let people = document.getElementById("people");
 let reset = document.getElementById("reset");
 
+let border = document.getElementById("inputBorder");
 
 var lastTipValue = 0;
 var lastTotalValue = 0;
@@ -100,7 +101,9 @@ input.addEventListener("input", () => {
     lastTotalValue = lastTipValue + parseFloat(input.value);
     tip.innerText = `$ ${lastTipValue / people.value}`;
     total.innerHTML = `$ ${lastTotalValue / people.value}`;
+
 })
+
 
 
 reset.addEventListener("click", () => {
@@ -109,10 +112,6 @@ reset.addEventListener("click", () => {
     total.innerHTML = "$ 0";
     people.value = 1;
 })
-
-
-
-
 
 
 
