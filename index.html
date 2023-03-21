@@ -17,8 +17,6 @@
 
   <div class="box w-75 h-50 rounded mx-auto my-auto d-flex flex-column align-items-center rounded-0">
 
-
-
     <div class="mb-5 text-center" style="position: relative; top: 12%; letter-spacing: 0.35rem;">
       <img src="images/logo.svg" width="60%" alt="">
     </div>
@@ -26,10 +24,10 @@
     <div class=" child-container rounded bg-white  my-auto mx-auto d-flex align-items-center justify-content-around"
       style="width:60%; height: 65%;">
 
-      <div class="child rounded h-100 ">
+      <div class="child rounded h-100 my-0 py-0">
 
-        <div class="form  h-100 ">
-          <div class="mb-1 mt-4">
+        <div class="form  h-100  py-0">
+          <div class="mb-1 mt-3">
             <label for="bill" class="form-label">Bill:</label>
 
             <div class="input-container form-control " id="inputBorder" style="width:20vw">
@@ -63,12 +61,18 @@
 
           </div>
           <div class="mb-1 mt-3">
-            <label for="people" class="form-label">Number of People</label>
-
-            <div class="input-container form-control " style="width:20vw">
-              <span class="m-0"><img src="images/icon-person.svg" alt="Logo" class="logo m-0"></span>
-              <input type="text" id="people" class="input border-0 w-100 fw-bold text-info " value="1">
+            <label for="people" class="form-label mb-1">Number of People</label>
+            <div class="mt-1">
+              <p class="text-end my-0 py-0 text-danger" style="font-size: 10px; display: none;" id="alert">value can't
+                be zero</p>
+              <div class="input-container form-control my-0" style="width:20vw">
+                <span class="m-0"><img src="images/icon-person.svg" alt="Logo" class="logo m-0"></span>
+                <input type="number" id="people" class="input border-0 w-100 fw-bold text-info " value="1">
+              </div>
             </div>
+
+
+
 
           </div>
         </div>
