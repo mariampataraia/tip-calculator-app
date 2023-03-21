@@ -148,23 +148,26 @@ custom.addEventListener("click", () => {
 
 
 
-let button = document.getElementById('custom');
+// let button = document.getElementById('custom');
 
-button.addEventListener('click', () => {
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.style.width = '5.88vw';
-    input.setAttribute('id', 'customInput');
-    input.classList.add('input');
-    input.classList.add('inputtt');
-    input.addEventListener('blur', () => {
-        button.innerText = input.value;
+// button.addEventListener('click', () => {
+//     const input = document.createElement('input');
+//     input.type = 'text';
+//     input.style.width = '5.88vw';
+//     input.setAttribute('id', 'customInput');
+//     input.classList.add('input');
+//     input.classList.add('inputtt');
+//     input.addEventListener('blur', () => {
+//         button.innerText = input.value;
 
-    });
-    button.replaceWith(input);
-    input.focus();
+//     });
+//     button.replaceWith(input);
+//     input.focus();
 
-});
+// });
+
+
+
 
 
 // button.addEventListener("click", () => {
