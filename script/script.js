@@ -33,6 +33,10 @@ let border = document.getElementById("inputBorder");
 let alert = document.getElementById("alert");
 
 
+let button = document.getElementById('custom');
+let inputButton = document.getElementById('customInput');
+
+
 var lastTipValue = 0;
 var lastTotalValue = 0;
 
@@ -88,12 +92,26 @@ fifty.addEventListener("click", () => {
 });
 
 
-// people.addEventListener("input", () => {
+inputButton.addEventListener("input", () => {
+    let amount = Math.round(input.value);
+    let value = inputButton.value;
+    lastTipValue = (value / 100) * amount;
+    lastTotalValue = lastTipValue + parseFloat(input.value);
+    tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
+    total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
+    activeBtn = value / 100;
+});
 
-//     tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
-//     total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
 
-// })
+button.addEventListener('click', () => {
+
+
+    button.style.display = "none";
+    inputButton.style.display = "block";
+    inputButton.focus();
+
+});
+
 
 people.addEventListener("input", () => {
 
@@ -104,7 +122,7 @@ people.addEventListener("input", () => {
         alert.style.display = "none";
         tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
         total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
-        validateInput()
+        validateInput();
     }
 })
 
@@ -139,50 +157,17 @@ reset.addEventListener("click", () => {
     total.innerHTML = "$ 0";
     people.value = 1;
     alert.style.display = "none";
+    inputButton.style.display = "none";
+    inputButton.value = "";
+    button.style.display = "block";
+
 })
 
 
-custom.addEventListener("click", () => {
-
-})
 
 
 
 
-let button = document.getElementById('custom');
-
-// button.addEventListener('click', () => {
-//     const input = document.createElement('input');
-//     input.type = 'text';
-//     input.style.width = '5.88vw';
-//     input.setAttribute('id', 'customInput');
-//     input.classList.add('input');
-//     input.classList.add('inputtt');
-//     input.addEventListener('blur', () => {
-//         button.innerText = input.value;
-
-//     });
-//     button.replaceWith(input);
-//     input.focus();
-
-// });
-
-
-let customInput = document.getElementById("customInput");
-
-button.addEventListener('click', () => {
-    button.style.display = "none";
-    customInput.style.display = "block";
-
-    // input.addEventListener('blur', () => {
-    //     button.innerText = input.value;
-
-    // });
-    // button.replaceWith(customInput);
-    customInput.focus();
-    // button.focus();
-
-});
 
 
 
