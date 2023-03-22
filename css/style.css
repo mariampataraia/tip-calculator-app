@@ -136,6 +136,10 @@
 
 
 
+.text-success {
+    color: #026e6d !important;
+}
+
 
 /* 
 input[type="text"] {

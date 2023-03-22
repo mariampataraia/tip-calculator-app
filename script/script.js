@@ -31,11 +31,12 @@ let reset = document.getElementById("reset");
 let border = document.getElementById("inputBorder");
 
 let alert = document.getElementById("alert");
-
+let secAlert = document.getElementById("secAlert");
 
 let button = document.getElementById('custom');
 let inputButton = document.getElementById('customInput');
 
+var lastButton = "";
 
 var lastTipValue = 0;
 var lastTotalValue = 0;
@@ -53,6 +54,9 @@ five.addEventListener("click", () => {
     tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
     total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
     activeBtn = 0.05;
+    inputButton.style.display = "none";
+    inputButton.value = "";
+    button.style.display = "block";
 });
 
 ten.addEventListener("click", () => {
@@ -62,6 +66,9 @@ ten.addEventListener("click", () => {
     tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
     total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
     activeBtn = 0.1;
+    inputButton.style.display = "none";
+    inputButton.value = "";
+    button.style.display = "block";
 });
 
 fifteen.addEventListener("click", () => {
@@ -71,6 +78,9 @@ fifteen.addEventListener("click", () => {
     tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
     total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
     activeBtn = 0.15;
+    inputButton.style.display = "none";
+    inputButton.value = "";
+    button.style.display = "block";
 });
 
 twentyfive.addEventListener("click", () => {
@@ -80,6 +90,9 @@ twentyfive.addEventListener("click", () => {
     tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
     total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
     activeBtn = 0.25;
+    inputButton.style.display = "none";
+    inputButton.value = "";
+    button.style.display = "block";
 });
 
 fifty.addEventListener("click", () => {
@@ -89,10 +102,28 @@ fifty.addEventListener("click", () => {
     tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
     total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
     activeBtn = 0.5;
+    inputButton.style.display = "none";
+    inputButton.value = "";
+    button.style.display = "block";
 });
 
 
+
+
+
+
+
+
+
+
+
+
 inputButton.addEventListener("input", () => {
+
+    if (input.value == "" || input.value == 0) {
+        secAlert.style.display = "block";
+    }
+
     let amount = Math.round(input.value);
     let value = inputButton.value;
     lastTipValue = (value / 100) * amount;
@@ -100,6 +131,9 @@ inputButton.addEventListener("input", () => {
     tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
     total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
     activeBtn = value / 100;
+
+    buttons.style.backgroundColor = '#26c2ad';
+
 });
 
 
@@ -140,11 +174,18 @@ function removeError() {
 
 input.addEventListener("input", () => {
 
-    let amount = input.value;
-    lastTipValue = activeBtn * amount;
-    lastTotalValue = lastTipValue + parseFloat(input.value);
-    tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
-    total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
+    if (input.value == 0) {
+        secAlert.style.display = "block";
+    } else {
+        secAlert.style.display = "none";
+        let amount = input.value;
+        lastTipValue = activeBtn * amount;
+        lastTotalValue = lastTipValue + parseFloat(input.value);
+        tip.innerText = `$ ${(lastTipValue / people.value).toFixed(1)}`;
+        total.innerHTML = `$ ${(lastTotalValue / people.value).toFixed(1)}`;
+
+    }
+
 
 })
 
