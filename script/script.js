@@ -118,6 +118,19 @@ fifty.addEventListener("click", () => {
 
 
 
+
+
+
+button.addEventListener('click', () => {
+
+
+    button.style.display = "none";
+    inputButton.style.display = "block";
+    inputButton.focus();
+
+});
+
+
 inputButton.addEventListener("input", () => {
 
     if (input.value == "" || input.value == 0) {
@@ -136,15 +149,6 @@ inputButton.addEventListener("input", () => {
 
 });
 
-
-button.addEventListener('click', () => {
-
-
-    button.style.display = "none";
-    inputButton.style.display = "block";
-    inputButton.focus();
-
-});
 
 
 people.addEventListener("input", () => {
