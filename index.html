@@ -22,92 +22,114 @@
 
     </div>
 
-    <div class=" child-container rounded bg-white  my-auto mx-auto d-flex align-items-center justify-content-around">
+    <div class=" child-container rounded bg-white   my-auto mx-auto d-flex align-items-center justify-content-around">
 
-      <div class="child rounded h-100 my-0 py-0">
-
-        <div class="form  h-100  py-0">
-          <div class="mb-1 mt-3">
-
-
-            <label for="bill" class="form-label mb-0">Bill:</label>
-            <p class="text-end my-0 py-0 text-danger" style="font-size: 10px; display: none;" id="secAlert">value can't
-              be zero</p>
-            <div class="input-container form-control mt-0" id="inputBorder" style="width:20vw">
-              <span class="m-0"><img src="images/icon-dollar.svg" alt="Logo" class="logo m-0"></span>
-              <input type="text" id="bill" class="input border-0 w-100 fw-bold text-info">
-
-            </div>
-
-
-
-          </div>
-          <div class="mb-1  " style="height: 34%;">
-            <label class="form-label">Select Tip %</label>
-
-            <div class="tip  h-75 d-flex flex-wrap w-100 justify-content-around">
-
-              <button id="five"
-                class="tip_button active text-center rounded px-3 py-0 border-0  text-light my-1">5%</button>
-              <button id="ten" class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">10%</button>
-              <button id="fifteen"
-                class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">15%</button>
-              <button id="twentyfive"
-                class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">25%</button>
-              <button id="fifty" class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">50%</button>
-              <button
-                class="tip_button_custom  text-center text text-center btn fw-bold rounded px-0 py-0 border-0  my-1 custom text-success"
-                id="custom">
-                custom
-              </button>
-              <input type="text" id="customInput" class="custom_input fw-bold"
-                style="width: 5.88vw; display: none; text-align: right;">
-
-            </div>
-
-          </div>
+      <div class="row h-100 w-100 justify-content-around">
 
 
 
 
-          <div class="mb-1 mt-3">
-            <label for="people" class="form-label mb-1">Number of People</label>
-            <div class="mt-1">
-              <p class="text-end my-0 py-0 text-danger" style="font-size: 10px; display: none;" id="alert">value can't
+
+        <div class="child rounded  first col-sm-6 col-12  my-0 py-0">
+
+          <div class="form  h-100  py-0">
+            <div class="mb-1 mt-3">
+
+
+              <label for="bill" class="form-label mb-0">Bill:</label>
+              <p class="text-end my-0 py-0 text-danger" style="font-size: 10px; display: none;" id="secAlert">value
+                can't
                 be zero</p>
-              <div class="input-container form-control my-0" style="width:20vw">
-                <span class="m-0"><img src="images/icon-person.svg" alt="Logo" class="logo m-0"></span>
-                <input type="number" id="people" class="input border-0 w-100 fw-bold text-info " value="1">
+              <div class="input-container form-control mt-0" id="inputBorder" style="width:20vw">
+                <span class="m-0"><img src="images/icon-dollar.svg" alt="Logo" class="logo m-0"></span>
+                <input type="text" id="bill" class="input border-0 w-100 fw-bold text-info">
+
               </div>
+
+
+
+            </div>
+            <div class="mb-1  " style="height: 34%;">
+              <label class="form-label">Select Tip %</label>
+
+              <div class="tip  h-75 d-flex flex-wrap w-100 justify-content-around">
+
+                <button id="five"
+                  class="tip_button active text-center rounded px-3 py-0 border-0  text-light my-1">5%</button>
+                <button id="ten" class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">10%</button>
+                <button id="fifteen"
+                  class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">15%</button>
+                <button id="twentyfive"
+                  class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">25%</button>
+                <button id="fifty"
+                  class="tip_button text-center rounded px-3 py-0 border-0  text-light my-1">50%</button>
+                <button
+                  class="tip_button_custom  text-center text text-center btn fw-bold rounded px-0 py-0 border-0  my-1 custom text-success"
+                  id="custom">
+                  custom
+                </button>
+                <input type="text" id="customInput" class="custom_input fw-bold"
+                  style="width: 5.88vw; display: none; text-align: right;">
+
+              </div>
+
             </div>
 
+            <div class="mb-1 mt-3">
+              <label for="people" class="form-label mb-1">Number of People</label>
+              <div class="mt-1">
+                <p class="text-end my-0 py-0 text-danger" style="font-size: 10px; display: none;" id="alert">value can't
+                  be zero</p>
+                <div class="input-container form-control my-0" style="width:20vw">
+                  <span class="m-0"><img src="images/icon-person.svg" alt="Logo" class="logo m-0"></span>
+                  <input type="number" id="people" class="input border-0 w-100 fw-bold text-info " value="1">
+                </div>
+              </div>
 
 
+
+
+            </div>
+          </div>
+
+
+        </div>
+        <div class="child second  col-sm-6 col-12 rounded second  p-3 ">
+          <div class="tip_amount d-flex align-items-center justify-content-between h-25 mt-1">
+            <div class="d-flex m-0 flex-column h-100 mx-2 text-light">
+              <p class="m-0 ">Tip Amount</p>
+              <span class="m-0 text-sm" style="font-size: 0.8rem;  color: #659fa3;">/person</span>
+            </div>
+            <p id="tip" class="fw-bold text-right my-0 mx-2 h-100 money_text"></p>
+          </div>
+
+          <div class="tip_amount d-flex align-items-center justify-content-between h-25 mt-2">
+            <div class="d-flex m-0 flex-column h-100 mx-2 text-light">
+              <p class="m-0 ">Total</p>
+              <span class="m-0 text-sm" style="font-size: 0.8rem; color: #659fa3;">/person</span>
+            </div>
+            <p id="total" class="fw-bold text-right my-0 mx-2 h-100 money_text"></p>
+          </div>
+          <div class="">
+            <button id="reset" class="btn btn-primary border-0 w-100 mt-5 fw-bold"
+              style="color: #004847;">RESET</button>
+          </div>
+
+
+
+
+
+
+
+          <div class="total">
 
           </div>
-        </div>
 
+
+
+        </div>
 
       </div>
-      <div class="child second  rounded  my-2 p-3 ">
-        <div class="tip_amount d-flex align-items-center justify-content-between h-25 mt-1">
-          <div class="d-flex m-0 flex-column h-100 mx-2 text-light">
-            <p class="m-0 ">Tip Amount</p>
-            <span class="m-0 text-sm" style="font-size: 0.8rem;  color: #659fa3;">/person</span>
-          </div>
-          <p id="tip" class="fw-bold text-right my-0 mx-2 h-100 money_text"></p>
-        </div>
-
-        <div class="tip_amount d-flex align-items-center justify-content-between h-25 mt-2">
-          <div class="d-flex m-0 flex-column h-100 mx-2 text-light">
-            <p class="m-0 ">Total</p>
-            <span class="m-0 text-sm" style="font-size: 0.8rem; color: #659fa3;">/person</span>
-          </div>
-          <p id="total" class="fw-bold text-right my-0 mx-2 h-100 money_text"></p>
-        </div>
-        <div class="">
-          <button id="reset" class="btn btn-primary border-0 w-100 mt-5 fw-bold" style="color: #004847;">RESET</button>
-        </div>
 
 
 
@@ -115,13 +137,8 @@
 
 
 
-        <div class="total">
-
-        </div>
 
 
-
-      </div>
 
     </div>
 
