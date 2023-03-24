@@ -24,7 +24,7 @@
 
     <div class=" child-container rounded bg-white   my-auto mx-auto d-flex align-items-center justify-content-around">
 
-      <div class="row h-100 w-100 justify-content-around">
+      <div class="row h-100 w-100 justify-content-around align-items-center">
 
 
 
@@ -32,15 +32,15 @@
 
         <div class="child rounded  first col-sm-6 col-12  my-0 py-0">
 
-          <div class="form  h-100  py-0">
-            <div class="mb-1 mt-3">
+          <div class="form  h-100  py-0 ">
+            <div class="mb-1 mt-2 ">
 
 
               <label for="bill" class="form-label mb-0">Bill:</label>
               <p class="text-end my-0 py-0 text-danger" style="font-size: 10px; display: none;" id="secAlert">value
                 can't
                 be zero</p>
-              <div class="input-container form-control mt-0" id="inputBorder" style="width:20vw">
+              <div class="input-container form-control mt-0  w-100" id="inputBorder" style="width:20vw">
                 <span class="m-0"><img src="images/icon-dollar.svg" alt="Logo" class="logo m-0"></span>
                 <input type="text" id="bill" class="input border-0 w-100 fw-bold text-info">
 
@@ -49,10 +49,10 @@
 
 
             </div>
-            <div class="mb-1  " style="height: 34%;">
-              <label class="form-label">Select Tip %</label>
+            <div class="  w-100 " style="height: 34%;">
+              <label class="form-label mb-2 buttons-form-section">Select Tip %</label>
 
-              <div class="tip  h-75 d-flex flex-wrap w-100 justify-content-around">
+              <!-- <div class="tip  h-75 d-flex flex-wrap w-100 justify-content-around">
 
                 <button id="five"
                   class="tip_button active text-center rounded px-3 py-0 border-0  text-light my-1">5%</button>
@@ -71,16 +71,51 @@
                 <input type="text" id="customInput" class="custom_input fw-bold"
                   style="width: 5.88vw; display: none; text-align: right;">
 
+              </div> -->
+              <div class="row w-100 m-0 mb-0 p-0">
+                <div class="col-sm-4 col-6 bg-danger text-center p-0 my-1"><button
+                    class="btn tipp_button bg-info">df</button>
+                </div>
+                <div class="col-sm-4 col-6 bg-danger text-center p-0 my-1"><button
+                    class="btn tipp_button bg-info">df</button>
+                </div>
+                <div class="col-sm-4 col-6 bg-danger text-center p-0 my-1"><button
+                    class="btn tipp_button bg-info">df</button>
+                </div>
+                <div class="col-sm-4 col-6 bg-danger text-center p-0 my-1"><button
+                    class="btn tipp_button bg-info">df</button>
+                </div>
+                <div class="col-sm-4 col-6 bg-danger text-center p-0 my-1"><button
+                    class="btn tipp_button bg-info">df</button>
+                </div>
+                <div class="col-sm-4 col-6 bg-danger text-center p-0 my-1"><button
+                    class="btn tipp_button bg-info">df</button>
+                </div>
+
+
+
+                <!-- <div class="col-4">10</div>
+                <div class="col-4">12</div>
+                <div class="col-4">221</div> -->
               </div>
+
+
+
+
+
+
+
+
+
 
             </div>
 
-            <div class="mb-1 mt-3">
+            <div class="mb-1 mt-5 mt-sm-5 bg-info">
               <label for="people" class="form-label mb-1">Number of People</label>
               <div class="mt-1">
                 <p class="text-end my-0 py-0 text-danger" style="font-size: 10px; display: none;" id="alert">value can't
                   be zero</p>
-                <div class="input-container form-control my-0" style="width:20vw">
+                <div class="input-container form-control my-0 w-100" style="width:20vw">
                   <span class="m-0"><img src="images/icon-person.svg" alt="Logo" class="logo m-0"></span>
                   <input type="number" id="people" class="input border-0 w-100 fw-bold text-info " value="1">
                 </div>
