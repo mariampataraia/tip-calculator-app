@@ -47,8 +47,9 @@
 
 .tip_button {
     background-color: #00474b;
-    width: 30%;
-    height: 39%;
+
+
+    height: 100%;
 }
 
 .tipp_button {
@@ -57,9 +58,11 @@
 
 
 .tip_button_custom {
-    background-color: rgb(15, 99, 64);
-    width: 30%;
-    height: 39%;
+    background-color: #f3f9f9 !important;
+    /* width: 30%;
+    height: 39%; */
+    width: 90%;
+    color: #5a6869;
 }
 
 
@@ -197,9 +200,7 @@
 
     }
 
-    .buttons-form-section {
-        /* height: 10vh; */
-    }
+
 
 
 }
